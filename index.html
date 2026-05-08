@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubManager — Controla tus suscripciones, recupera tu dinero</title>
+  <meta name="description" content="SubManager centraliza todos tus pagos recurrentes en un solo lugar. Nunca más cobros sorpresa ni suscripciones olvidadas. Descarga gratis." />
+  <meta property="og:title"       content="SubManager — Controla tus suscripciones" />
+  <meta property="og:description" content="La app que convierte el caos de las renovaciones automáticas en tranquilidad financiera." />
+  <meta property="og:type"        content="website" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="SubManager inicio">
+      <img src="assets/logo.png" alt="SubManager logo" />
+      SubManager
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#features">Características</a></li>
+      <li><a href="#pricing">Precios</a></li>
+      <li><a href="#future">Próximamente</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li class="nav-cta"><a href="#cta-banner" class="btn btn-primary">Descargar Gratis</a></li>
+    </ul>
+    <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <!-- Left -->
+    <div class="hero-content">
+      <span class="hero-eyebrow">
+        <i data-lucide="rocket"></i> Finanzas personales inteligentes
+      </span>
+      <h1 id="hero-title" class="hero-title">
+        ¿Sabes exactamente cuánto gastas en <span>suscripciones</span> cada mes?
+      </h1>
+      <p class="hero-sub">
+        Convierte el estrés de las renovaciones automáticas en tranquilidad financiera.
+        SubManager centraliza todos tus pagos recurrentes en un solo lugar, claro y sin sorpresas.
+      </p>
+      <div class="hero-actions">
+        <a href="#cta-banner" class="btn btn-primary btn-lg" id="hero-cta-primary">
+          <i data-lucide="sparkles"></i> Empezar Gratis
+        </a>
+        <button class="btn btn-outline btn-lg" id="hero-cta-demo" style="color:#93C5FD;border-color:#93C5FD;background:transparent;" onclick="openVideoModal()">
+          <i data-lucide="play-circle"></i> Ver Demo
+        </button>
+      </div>
+    </div>
+
+    <!-- Right — phone frame with video -->
+    <div class="phone-wrapper" id="demo">
+      <div class="phone-glow"></div>
+      <div class="phone-frame" aria-label="Vista previa de la app SubManager">
+        <div class="phone-notch"></div>
+        <video src="assets/videoapp.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM / SOLUTION ===================== -->
+<section id="problem" class="section" aria-labelledby="problem-title">
+  <div class="container">
+    <div class="ps-grid">
+      <!-- Problem -->
+      <div class="reveal">
+        <span class="badge"><i data-lucide="zap"></i> El Problema</span>
+        <h2 id="problem-title" class="section-title">La economía de la suscripción te está cobrando de más</h2>
+        <div class="problem-card" role="list">
+          <div class="problem-card-header">
+            <i data-lucide="alert-triangle"></i>
+          </div>
+          <div class="problem-item" role="listitem">
+            <span class="icon"><i data-lucide="banknote"></i></span>
+            <div>
+              <strong>Cobros sorpresa</strong>
+              <p style="font-size:.9rem;margin-top:4px">Cargos que olvidaste y que te descubren al revisar el estado de cuenta.</p>
+            </div>
+          </div>
+          <div class="problem-item" role="listitem">
+            <span class="icon"><i data-lucide="repeat"></i></span>
+            <div>
+              <strong>Servicios que ya no usas</strong>
+              <p style="font-size:.9rem;margin-top:4px">Pagas mes tras mes por apps que ni recuerdas haber contratado.</p>
+            </div>
+          </div>
+          <div class="problem-item" role="listitem">
+            <span class="icon"><i data-lucide="calendar-x"></i></span>
+            <div>
+              <strong>Fechas de renovación dispersas</strong>
+              <p style="font-size:.9rem;margin-top:4px">Sin un lugar centralizado, es imposible llevar el control manual.</p>
+            </div>
+          </div>
+          <div class="problem-item" role="listitem">
+            <span class="icon"><i data-lucide="trending-down"></i></span>
+            <div>
+              <strong>Dinero invisible perdido</strong>
+              <p style="font-size:.9rem;margin-top:4px">El promedio de personas subestima su gasto en suscripciones un 40%.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution -->
+      <div class="reveal">
+        <span class="badge" style="background:#DCFCE7;color:#16A34A;">
+          <i data-lucide="check-circle"></i> La Solución
+        </span>
+        <h2 class="section-title">SubManager: tu centro de control personal</h2>
+        <p style="margin-bottom:28px;font-size:1.05rem;">
+          Una sola app que agrega, visualiza y te alerta sobre cada renovación, para que
+          siempre tengas el control total de tu gasto recurrente.
+        </p>
+        <img src="assets/problem.png" alt="Ilustración del problema de las suscripciones descontroladas" class="solution-img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features" class="section section-blue" aria-labelledby="features-title">
+  <div class="container text-center">
+    <span class="badge reveal"><i data-lucide="settings-2"></i> Características</span>
+    <h2 id="features-title" class="section-title reveal">Todo lo que necesitas en un solo lugar</h2>
+    <p class="section-sub reveal">
+      Diseñado para darte claridad total sobre tus gastos recurrentes, sin complicaciones.
+    </p>
+    <div class="features-grid">
+
+      <div class="feature-card reveal" id="feature-gestion">
+        <div class="feature-icon"><i data-lucide="clipboard-list"></i></div>
+        <h3>Gestión Total</h3>
+        <p>Añade servicios predefinidos como Netflix o Spotify, o agrega cualquier suscripción personalizada con nombre, monto y ciclo.</p>
+      </div>
+
+      <div class="feature-card reveal" id="feature-panel">
+        <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+        <h3>Panel de Detalles</h3>
+        <p>Visualiza costos, ciclos de facturación, estado activo/inactivo y la próxima fecha de renovación de cada servicio.</p>
+      </div>
+
+      <div class="feature-card reveal" id="feature-sync">
+        <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+        <h3>Sincronización Segura</h3>
+        <p>Tus datos y sesiones protegidos desde cualquier dispositivo. Tu información siempre disponible y segura.</p>
+      </div>
+
+      <div class="feature-card reveal" id="feature-resumen">
+        <div class="feature-icon"><i data-lucide="wallet"></i></div>
+        <h3>Resumen Financiero</h3>
+        <p>Ve de un vistazo cuánto gastas al mes, al año y por categoría. Información clara que te permite actuar.</p>
+      </div>
+
+      <div class="feature-card reveal" id="feature-alertas">
+        <div class="feature-icon"><i data-lucide="bell-ring"></i></div>
+        <h3>Alertas Proactivas</h3>
+        <p>Recibe notificaciones antes de cada renovación para que nunca más te tome por sorpresa un cargo automático.</p>
+      </div>
+
+      <div class="feature-card reveal" id="feature-catalogo">
+        <div class="feature-icon"><i data-lucide="globe"></i></div>
+        <h3>Catálogo Integrado</h3>
+        <p>Biblioteca de servicios populares con logos y datos prefiltrados. Añadir una nueva suscripción toma segundos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="section" aria-labelledby="pricing-title">
+  <div class="container text-center">
+    <span class="badge reveal"><i data-lucide="gem"></i> Planes</span>
+    <h2 id="pricing-title" class="section-title reveal">Empieza gratis, escala cuando lo necesites</h2>
+    <p class="section-sub reveal">
+      Sin compromisos. El plan gratuito ya te da superpoderes para controlar tus suscripciones.
+    </p>
+    <div class="pricing-grid reveal">
+
+      <!-- Free -->
+      <div class="plan-card" id="plan-free">
+        <p class="plan-name">Gratuito</p>
+        <p class="plan-price"><sup>$</sup>0</p>
+        <p class="plan-period">Para siempre gratis</p>
+        <ul class="plan-features">
+          <li><span class="check"><i data-lucide="check"></i></span> Hasta 10 suscripciones</li>
+          <li><span class="check"><i data-lucide="check"></i></span> Panel de detalles básico</li>
+          <li><span class="check"><i data-lucide="check"></i></span> Catálogo de servicios populares</li>
+          <li><span class="check"><i data-lucide="check"></i></span> Resumen mensual de gastos</li>
+          <li><span class="check"><i data-lucide="check"></i></span> Sincronización en 1 dispositivo</li>
+        </ul>
+        <a href="#cta-banner" class="btn btn-outline" id="plan-free-cta" style="width:100%;justify-content:center;">
+          Comenzar Gratis
+        </a>
+      </div>
+
+      <!-- Premium -->
+      <div class="plan-card premium" id="plan-premium">
+        <div class="plan-badge"><i data-lucide="star"></i> Más Popular</div>
+        <p class="plan-name" style="color:#92400E;">Premium</p>
+        <p class="plan-price" style="color:#92400E;"><sup>$</sup>4<span style="font-size:1.3rem">.99</span></p>
+        <p class="plan-period" style="color:#92400E;">por mes · cancela cuando quieras</p>
+        <ul class="plan-features">
+          <li><span class="lock"><i data-lucide="star"></i></span> Suscripciones <strong>ilimitadas</strong></li>
+          <li><span class="lock"><i data-lucide="star"></i></span> Analíticas detalladas y gráficas</li>
+          <li><span class="lock"><i data-lucide="star"></i></span> Alertas de aumento de precios</li>
+          <li><span class="lock"><i data-lucide="star"></i></span> Sincronización multidispositivo</li>
+          <li><span class="lock"><i data-lucide="star"></i></span> Acceso anticipado a nuevas funciones</li>
+          <li><span class="lock"><i data-lucide="star"></i></span> Soporte prioritario</li>
+        </ul>
+        <a href="#cta-banner" class="btn btn-gold" id="plan-premium-cta" style="width:100%;justify-content:center;">
+          Obtener Premium
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FUTURE ===================== -->
+<section id="future" class="section section-alt" aria-labelledby="future-title">
+  <div class="container text-center">
+    <span class="badge reveal"><i data-lucide="sparkles"></i> Próximamente</span>
+    <h2 id="future-title" class="section-title reveal">El futuro de SubManager</h2>
+    <p class="section-sub reveal">
+      Estamos construyendo funcionalidades que llevarán tu control financiero al siguiente nivel.
+    </p>
+    <div class="future-grid reveal">
+      <div class="future-card">
+        <div class="future-icon"><i data-lucide="bot"></i></div>
+        <div>
+          <h4>Asesor Financiero IA</h4>
+          <p>Recomendaciones inteligentes para reducir tu gasto en suscripciones basadas en tus hábitos.</p>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-icon"><i data-lucide="trending-up"></i></div>
+        <div>
+          <h4>Alertas de Aumento de Precio</h4>
+          <p>Detecta automáticamente cuando un servicio sube de precio y decide si vale la pena seguir.</p>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-icon"><i data-lucide="building-2"></i></div>
+        <div>
+          <h4>Conexión Bancaria</h4>
+          <p>Importa y detecta suscripciones directamente desde tus movimientos bancarios.</p>
+        </div>
+      </div>
+      <div class="future-card">
+        <div class="future-icon"><i data-lucide="users"></i></div>
+        <div>
+          <h4>Gestión Familiar</h4>
+          <p>Comparte planes familiares y divide gastos entre miembros del hogar fácilmente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BANNER ===================== -->
+<section id="cta-banner" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">Deja de perder dinero mes a mes.</h2>
+    <p>Descarga SubManager hoy y toma el control total de tus suscripciones.</p>
+    <div class="store-buttons">
+      <a href="#" class="store-btn" id="btn-appstore" aria-label="Descargar en App Store">
+        <span class="store-icon"><i data-lucide="smartphone"></i></span>
+        <div><small style="font-size:.7rem;display:block;opacity:.75">Disponible en</small>App Store</div>
+      </a>
+      <a href="#" class="store-btn" id="btn-googleplay" aria-label="Descargar en Google Play">
+        <span class="store-icon"><i data-lucide="play-circle"></i></span>
+        <div><small style="font-size:.7rem;display:block;opacity:.75">Disponible en</small>Google Play</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="SubManager inicio">
+          <img src="assets/logo.png" alt="SubManager logo" />
+          SubManager
+        </a>
+        <p>
+          Tu centro de control personal para suscripciones.
+          Claridad financiera en la palma de tu mano.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Producto</h5>
+        <ul>
+          <li><a href="#features">Características</a></li>
+          <li><a href="#pricing">Precios</a></li>
+          <li><a href="#future">Próximamente</a></li>
+          <li><a href="#demo">Ver Demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#" id="footer-privacy">Privacidad</a></li>
+          <li><a href="#" id="footer-terms">Términos de Uso</a></li>
+          <li><a href="#" id="footer-contact">Contacto</a></li>
+          <li><a href="#" id="footer-support">Soporte</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SubManager. Todos los derechos reservados.</p>
+      <div class="social-links" aria-label="Redes sociales">
+        <a href="#" id="social-twitter"  aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" id="social-instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" id="social-linkedin"  aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== VIDEO MODAL ===================== -->
+<div id="video-modal" role="dialog" aria-modal="true" aria-label="Demo de SubManager" style="display:none;">
+  <div id="video-modal-backdrop" onclick="closeVideoModal()"></div>
+  <div id="video-modal-box">
+    <button id="video-modal-close" onclick="closeVideoModal()" aria-label="Cerrar video">
+      <i data-lucide="x"></i>
+    </button>
+    <video id="demo-video" src="assets/videoapp.mp4" controls playsinline></video>
+  </div>
+</div>
+
+<script>
+  function openVideoModal() {
+    var modal = document.getElementById('video-modal');
+    var video = document.getElementById('demo-video');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    video.play().catch(function() {});
+  }
+  function closeVideoModal() {
+    var modal = document.getElementById('video-modal');
+    var video = document.getElementById('demo-video');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    video.pause();
+    video.currentTime = 0;
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal();
+  });
+</script>
+<script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
